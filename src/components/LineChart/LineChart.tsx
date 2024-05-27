@@ -109,7 +109,7 @@ const LineChart: React.FC = () => {
         <h2 className='text-[#15134B] font-bold '>Performance</h2>
         <span>Year</span>
       </div>
-      <div className='w-[100%] max-[350px]:h-[20px] sm:min-h-[100px] lg:max-h-[300px] line-chart rounded-md overflow-hidden'>
+      <div className='w-[100%] max-[350px]:h-[200px] sm:min-h-[100px] lg:max-h-[300px] line-chart rounded-md overflow-hidden'>
         <ReactApexChart options={options} series={series} type='area' />
       </div>
     </div>
