@@ -4,8 +4,12 @@ import Chart from 'react-apexcharts';
 const RadialBar = () => {
 	const series = [80, 50, 20];
 	const options = {
-		colors: ['#563BFF', '#FF7049',"#20C997"],
-		labels: ['<b className="opacity-50 ">Mobile</b> <br/>  <B>8,085</B> 30%', '<b className="opacity-50 ">Tablets</b> <br/>  <B>8,085</B> 25%','<b className="opacity-50 ">Desktop</b> <br/>  <B>8,085</B> 13%',],
+		colors: ['#563BFF', '#FF7049', '#20C997'],
+		labels: [
+			'<b className="opacity-50 ">Mobile</b> <br/>  <B>8,085</B> 30%',
+			'<b className="opacity-50 ">Tablets</b> <br/>  <B>8,085</B> 25%',
+			'<b className="opacity-50 ">Desktop</b> <br/>  <B>8,085</B> 13%',
+		],
 		legend: {
 			show: true,
 			showForSingleSeries: false,
@@ -16,7 +20,7 @@ const RadialBar = () => {
 			floating: false,
 			fontSize: '14px',
 			fontFamily: 'Helvetica, Arial',
-			width: "auto",
+			width: 'auto',
 			height: undefined,
 			formatter: undefined,
 			offsetX: -40,
@@ -26,7 +30,7 @@ const RadialBar = () => {
 				useSeriesColors: false,
 			},
 			markers: {
-                show:true,
+				show: true,
 				width: 12,
 				height: 12,
 				strokeWidth: 0,
@@ -113,15 +117,55 @@ const RadialBar = () => {
 				},
 			},
 		},
+
+		responsive: [
+			{
+				// For screens smaller than 480px
+				breakpoint: 480,
+				options: {
+					labels: [
+						'<b className="opacity-50 ">Mobile</b>  30%',
+						'<b className="opacity-50 ">Tablets</b>  25%',
+						'<b className="opacity-50 ">Desktop</b>  13%',
+					],
+					legend: {
+						position: 'bottom',
+						fontSize: '14px',
+						offsetX: 0,
+						offsetY: 5,
+					},
+				},
+			},
+			{
+				// For screens between 481px and 768px
+				breakpoint: 768,
+				options: {
+					labels: [
+						'<b className="opacity-50 ">Mobile</b>  30%',
+						'<b className="opacity-50 ">Tablets</b>  25%',
+						'<b className="opacity-50 ">Desktop</b>  13%',
+					],
+					legend: {
+						position: 'bottom',
+						fontSize: '14px',
+						offsetX: 0,
+						offsetY: 5,
+					},
+				},
+			},
+			{
+				// For screens larger than 768px (default options apply)
+			},
+		],
 	};
 	return (
-		<div >
+		<div>
 			<div className=' flex justify-between items-center mb-2'>
 				<h2 className=' text-[#15134B] font-bold '>Sessions By Device</h2>
 				<span>Year</span>
 			</div>
 
-			<div className='h-[300px] bg-white rounded-md w-[100%] pt-8 '>
+			<div className=' h-auto md:h-[300px] max-[768px]:flex max-[768px]:justify-center bg-white rounded-md w-[100%] pt-8 '>
 				<Chart options={options} series={series} type='radialBar' width='400' />
 			</div>
 		</div>

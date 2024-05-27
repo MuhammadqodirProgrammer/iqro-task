@@ -11,11 +11,10 @@ import { CgMail } from 'react-icons/cg';
 import { LuMessageSquare } from 'react-icons/lu';
 import { SlBasket } from 'react-icons/sl';
 import { MdOutlineDateRange } from 'react-icons/md';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { navLinksList } from '../../db/navlinks';
 
 const Navbar = () => {
-	const navigate = useNavigate();
 	const usePathname = () => {
 		const location = useLocation();
 		return location.pathname;
@@ -35,7 +34,7 @@ const Navbar = () => {
 					{isOpen ? <FiMenu /> : <HiMenuAlt1 />}
 				</div>
 
-				<div className=' mt-16 text-black  flex flex-col gap-5  dark:text-mainColor '>
+				<div className=' mt-10 text-black  flex flex-col gap-5  dark:text-mainColor '>
 					{navLinksList.map((el, index) => (
 						<Link
 							className=' w-[70px] flex justify-center  relative  nav_link '
@@ -49,7 +48,7 @@ const Navbar = () => {
 
 							<button
 								type='button'
-								className={`   px-3 py-[10px] rounded-xl   text-[#C7C7D2]А   hover:bg-[#563BFF]       ${
+								className={`   px-3 py-[10px] rounded-xl   text-[#C7C7D2]   hover:bg-[#563BFF]       ${
 									usePathname() == `${el.to}`
 										? '    bg-[#563BFF]  text-white    '
 										: ''
