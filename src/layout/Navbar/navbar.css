@@ -1,0 +1,5 @@
+.nav_link:hover  span{
+opacity: 1 !important;
+display: block !important;
+transition: all 0.2s  !important;
+}

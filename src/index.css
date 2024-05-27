@@ -2,8 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #F7F8FB;
+}
+
+.main-container {
+  width: calc(100vw - 70px) !important;
+  box-sizing: border-box !important;
+  padding: 0 20px;
+}
+
+@media screen and (max-width:768px) {
+  .main-container {
+    width: 100% !important;
+  }
 }

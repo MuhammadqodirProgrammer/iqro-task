@@ -5,9 +5,11 @@ import Navbar from './Navbar';
 const Layout = ({ children }: any) => {
 	return (
 		<>
-			<Navbar />
 			<Header />
-			{children}
+			<div className='  flex justify-end   '>
+				<Navbar />
+				<div className='main-container  bg-orange-500'>{children}</div>
+			</div>
 		</>
 	);
 };

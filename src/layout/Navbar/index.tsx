@@ -1,5 +1,4 @@
-import { useState } from 'react';
-// import './navbar.css';
+import './navbar.css';
 import { CgLogOut } from 'react-icons/cg';
 import { FiMenu } from 'react-icons/fi';
 import { HiMenuAlt1 } from 'react-icons/hi';
@@ -13,74 +12,21 @@ import { LuMessageSquare } from 'react-icons/lu';
 import { SlBasket } from 'react-icons/sl';
 import { MdOutlineDateRange } from 'react-icons/md';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-const arr = [
-	{
-		to: '/',
-		pagename: 'Home',
-	},
-	{
-		to: '/layout',
-		pagename: 'Layout',
-	},
-	{
-		to: '/analytics',
-		pagename: 'Analytics',
-	},
-	{
-		to: '/database',
-		pagename: 'Database',
-	},
-	{
-		to: '/copy',
-		pagename: 'Copy',
-	},
-	{
-		to: '/mail',
-		pagename: 'Mail',
-	},
-	{
-		to: '/messages',
-		pagename: 'Message',
-	},
-	{
-		to: '/basket',
-		pagename: 'Basket',
-	},
-	{
-		to: '/date',
-		pagename: 'Date',
-	},
-	{
-		to: '/logout',
-		pagename: 'CgLogOut',
-	},
-];
+import { navLinksList } from '../../db/navlinks';
+
 const Navbar = () => {
 	const navigate = useNavigate();
 	const usePathname = () => {
 		const location = useLocation();
 		return location.pathname;
 	};
-	console.log(usePathname());
 
-	// const isOpenMenu = useSelector((state: any) => state.isOpenMenu);
-	// const positionNav: any = useSelector((state: any) => state.positionNav);
-	// const containerSt: any = useSelector((state: any) => state.containerSt);
-	// const navSt: any = useSelector((state: any) => state.navSt);
 	let isOpen = /true/.test('false');
-	let iscontainerSt = /true/.test('true');
-	let isNavSt = /true/.test('true');
-
-	console.log(isOpen, iscontainerSt, isNavSt);
 
 	return (
 		<div>
 			<nav
-				className={`fixed top-0 left-0  min-h-screen shadow z-30  ${
-					isNavSt
-						? 'bg-[#fff] dark:bg-topColor'
-						: 'bg-gradient-to-b from-slate-700 to-indigo-600'
-				} hidden md:flex items-center flex-col  ${
+				className={`fixed top-0 left-0  min-h-screen shadow-md z-30  bg-[#fff] hidden md:flex items-center flex-col  ${
 					isOpen ? 'w-[300px]' : 'w-[70px]'
 				}  left-0 
 				 `}
@@ -90,17 +36,26 @@ const Navbar = () => {
 				</div>
 
 				<div className=' mt-16 text-black  flex flex-col gap-5  dark:text-mainColor '>
-					{arr.map((el, index) => (
-						<Link className='bg-teal-500 w-[70px] flex justify-center border-l-2 border-red-600 ' to={el.to}>
+					{navLinksList.map((el, index) => (
+						<Link
+							className=' w-[70px] flex justify-center  relative  nav_link '
+							to={el.to}
+						>
+							<span
+								className={` min-h-full min-w-[10px]  visible opacity-0  absolute  left-[-6px]  bg-[#3734A9] rounded-md      ${
+									usePathname() == `${el.to}` && 'block  opacity-100'
+								}   `}
+							></span>
+
 							<button
 								type='button'
-								className={ 
-									`   px-3 py-[10px] rounded-xl             ${usePathname() == `${el.to}`
-                  ? 'active_link nav_link-button    bg-[#9B38FF]      '
-                  : 'nav_link-button '}   `
-								}
+								className={`   px-3 py-[10px] rounded-xl   text-[#C7C7D2]А   hover:bg-[#563BFF]       ${
+									usePathname() == `${el.to}`
+										? '    bg-[#563BFF]  text-white    '
+										: ''
+								}   `}
 							>
-								<div className='flex items-center text-[#C7C7D2] gap-x-2 justify-start'>
+								<div className='flex items-center  gap-x-2 justify-start'>
 									{index == 0 ? (
 										<TiHome size={25} />
 									) : index == 1 ? (
