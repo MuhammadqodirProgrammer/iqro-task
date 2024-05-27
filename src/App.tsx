@@ -1,15 +1,10 @@
-import { useState } from 'react'
-
-
+import Routers from './router';
 function App() {
-
-  return (
-    <>
-     <h1 className="text-3xl  text-red-700 font-bold underline">
-      Hello world!
-    </h1>
-    </>
-  )
+	return (
+		<>
+			<Routers />
+		</>
+	);
 }
 
-export default App
+export default App;
