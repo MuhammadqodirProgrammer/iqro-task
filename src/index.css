@@ -8,9 +8,7 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #F7F8FB;
-}
+
 
 .main-container {
   width: calc(100vw - 70px) !important;
@@ -30,4 +28,8 @@ body {
     padding: 0 10px;
 
   }
+}
+body {
+  background-color: #F7F8FB;
+  overflow-x: hidden ;
 }
