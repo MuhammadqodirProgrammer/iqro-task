@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiUsers } from 'react-icons/fi';
 import { RxCountdownTimer } from 'react-icons/rx';
 import { GrTime } from 'react-icons/gr';

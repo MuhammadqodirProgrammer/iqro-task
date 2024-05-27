@@ -133,9 +133,7 @@ interface ChartDataItem {
 }
 
 // Interface for chart options (using ApexOptions type from react-apexcharts package)
-interface ChartOptions extends ApexOptions {
-  // Add any custom options specific to your chart here
-}
+
 
 const LineChart: React.FC = () => {
   const series: ChartDataItem[] = [
@@ -145,7 +143,7 @@ const LineChart: React.FC = () => {
     },
   ];
 
-  const options: ChartOptions = {
+  const options = {
     chart: {
       height: '200px',
       width: '100%',

@@ -1,5 +1,3 @@
-import React from 'react';
-import ApexChart from '../../components/ChartLine/ChartLine';
 import { GoalsCard } from '../../components/GoalsCard/GoalsCard';
 import LineChart from '../../components/LineChart/LineChart';
 import RadialBar from '../../components/RadialBar/RadialBar';
