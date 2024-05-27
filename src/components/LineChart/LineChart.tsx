@@ -1,33 +1,14 @@
-import  "./chart.css"
+import './chart.css';
 import ReactApexChart from 'react-apexcharts';
 
-
-
 const LineChart = () => {
-	return (
-        <div >
-        <div className=' flex justify-between items-center mb-2'>
-            <h2 className=' text-[#15134B] font-bold '>Performance</h2>
-            <span>Year</span>
-        </div>
-        <div className=' w-[100%] min-h-[100px]  lg:max-h-[300px]  line-chart rounded-md overflow-hidden'>
-
-		<ReactApexChart options={obj.options} series={obj.series} type='area' />
-        </div>
-    </div>
-       
-	);
-};
-export default LineChart;
-
-const obj = {
-	series: [
+	const series=  [
 		{
 			name: 'Low - 2013',
 			data: [9, 11, 7, 11, 6, 10, 6, 10, 6, 11, 7, 11],
 		},
-	],
-	options: {
+	]
+	const options=  {
 		chart: {
 			height: '200px',
 			width: '100%',
@@ -121,5 +102,20 @@ const obj = {
 			offsetY: -25,
 			offsetX: -5,
 		},
-	},
+
+
+	}
+	return (
+		<div>
+			<div className=' flex justify-between items-center mb-2'>
+				<h2 className=' text-[#15134B] font-bold '>Performance</h2>
+				<span>Year</span>
+			</div>
+			<div className=' w-[100%]  max-[350px]:h-[20px] sm:min-h-[100px]  lg:max-h-[300px]  line-chart rounded-md overflow-hidden'>
+				<ReactApexChart options={options} series={series} type='area' />
+			</div>
+		</div>
+	);
 };
+export default LineChart;
+

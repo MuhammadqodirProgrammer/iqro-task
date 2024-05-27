@@ -3,7 +3,7 @@ import ApexChart from '../../components/ChartLine/ChartLine';
 import { GoalsCard } from '../../components/GoalsCard/GoalsCard';
 import LineChart from '../../components/LineChart/LineChart';
 import RadialBar from '../../components/RadialBar/RadialBar';
-import Sessions from '../../components/Sessions/Sessions';
+import Sessions from '../../components/Session/Sessions';
 import StatisticCard from '../../components/StatisticCard/StatisticCard';
 
 export const Home = () => {

@@ -119,25 +119,8 @@ const RadialBar = () => {
 		},
 
 		responsive: [
+			
 			{
-				// For screens smaller than 480px
-				breakpoint: 480,
-				options: {
-					labels: [
-						'<b className="opacity-50 ">Mobile</b>  30%',
-						'<b className="opacity-50 ">Tablets</b>  25%',
-						'<b className="opacity-50 ">Desktop</b>  13%',
-					],
-					legend: {
-						position: 'bottom',
-						fontSize: '14px',
-						offsetX: 0,
-						offsetY: 5,
-					},
-				},
-			},
-			{
-				// For screens between 481px and 768px
 				breakpoint: 768,
 				options: {
 					labels: [
@@ -153,9 +136,7 @@ const RadialBar = () => {
 					},
 				},
 			},
-			{
-				// For screens larger than 768px (default options apply)
-			},
+			
 		],
 	};
 	return (

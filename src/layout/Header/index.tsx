@@ -35,8 +35,8 @@ const Header = () => {
 					</form>
 
 					<div className={`flex  items-center gap-x-[30px] `}>
-						<CgMail size={25} className=' text-gray-500 cursor-pointer  ' />
-						<div className=' relative  cursor-pointer'>
+						<CgMail size={25} className=' max-[768px]:hidden text-gray-500 cursor-pointer  ' />
+						<div className=' relative  cursor-pointer max-[768px]:hidden '>
 							<FaRegBell size={25} className=' text-gray-500 cursor-pointer ' />
 							<span className=' absolute top-[1px] right-0   w-3 h-3 flex items-center justify-center rounded-full  bg-[#563BFF]  text-white  text-[10px]     '>
 								2
