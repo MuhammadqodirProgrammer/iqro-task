@@ -45,7 +45,7 @@ const LineChart: React.FC = () => {
       show: false,
     },
     title: {
-      text: ' Current Perriod',
+      text: '🔵 Current Perriod',
       align: 'right',
       margin: 10,
       offsetX: 0,
