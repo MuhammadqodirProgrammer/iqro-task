@@ -110,7 +110,7 @@ const RadialBar = () => {
 						fontFamily: undefined,
 						color: undefined,
 						offsetY: 16,
-						formatter: function (val) {
+						formatter: function (val:any) {
 							return val + '%';
 						},
 					},
