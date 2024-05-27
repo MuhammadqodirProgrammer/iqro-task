@@ -23,7 +23,7 @@ const RadialBar = () => {
 			width: 'auto',
 			height: undefined,
 			formatter: undefined,
-			offsetX: -40,
+			offsetX: -20,
 			offsetY: 20,
 			labels: {
 				colors: undefined,
@@ -147,7 +147,7 @@ const RadialBar = () => {
 			</div>
 
 
-			<div className=' h-auto md:h-[300px] max-[768px]:flex max-[768px]:justify-center bg-white rounded-md w-[100%] pt-8 '>
+			<div className=' h-auto md:h-[300px] flex justify-center bg-white rounded-md w-[100%] pt-8 '>
 				<Chart options={options} series={series} type='radialBar' width='400' />
 			</div>
 		</div>
