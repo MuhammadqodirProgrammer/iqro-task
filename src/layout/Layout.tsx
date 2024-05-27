@@ -8,7 +8,7 @@ const Layout = ({ children }: any) => {
 			<Header />
 			<div className='  flex justify-end   '>
 				<Navbar />
-				<div className='main-container  bg-orange-500'>{children}</div>
+				<div className='main-container  '>{children}</div>
 			</div>
 		</>
 	);
