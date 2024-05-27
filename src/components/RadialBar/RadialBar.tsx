@@ -146,6 +146,7 @@ const RadialBar = () => {
 				<span>Year</span>
 			</div>
 
+
 			<div className=' h-auto md:h-[300px] max-[768px]:flex max-[768px]:justify-center bg-white rounded-md w-[100%] pt-8 '>
 				<Chart options={options} series={series} type='radialBar' width='400' />
 			</div>
