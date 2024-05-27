@@ -39,7 +39,9 @@ export const GoalsCard = () => {
 
 					<div className='   shadow-2xl  rounded-md bg-white  flex-col  sm:flex-row  flex items-center justify-between px-5 py-5   w-[48%] '>
 						<div>
-							<h4 className=' text-[#1B1950]   font-bold sm:text-[22px] text-[16px] text-center '>140</h4>
+							<h4 className=' text-[#1B1950]   font-bold sm:text-[22px] text-[16px] text-center '>
+								140
+							</h4>
 							<span className=' text-[#5A5881]   font-bold text-[16px] '>
 								Today
 							</span>
@@ -59,7 +61,9 @@ export const GoalsCard = () => {
 							/>
 						</div>
 						<div>
-							<h4 className=' text-[#1B1950]   font-bold sm:text-[22px] text-[16px] text-center '>120</h4>
+							<h4 className=' text-[#1B1950]   font-bold sm:text-[22px] text-[16px] text-center '>
+								120
+							</h4>
 							<span className=' text-[#5A5881]   font-bold text-[16px] '>
 								Expected
 							</span>
