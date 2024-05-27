@@ -4,8 +4,6 @@ import ReactApexChart from 'react-apexcharts';
 import { ChartDataItem } from '../../utils/types/ChartDataItem';
 import { ChartType } from '../../utils/types/ChartType';
 
-// Interface for chart data series (flexible for different data types)
-
 
 const LineChart: React.FC = () => {
   const series: ChartDataItem[] = [

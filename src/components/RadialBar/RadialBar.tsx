@@ -1,8 +1,9 @@
 import Chart from 'react-apexcharts';
+import { ChartType } from '../../utils/types/ChartType';
 
 const RadialBar = () => {
 	const series = [80, 50, 20];
-	const options = {
+	const options:ChartType = {
 		colors: ['#563BFF', '#FF7049', '#20C997'],
 		labels: [
 			'<b className="opacity-50 ">Mobile</b> <br/>  <B>8,085</B> 30%',
