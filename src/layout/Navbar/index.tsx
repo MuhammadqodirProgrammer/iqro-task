@@ -60,25 +60,23 @@ const Navbar = () => {
 									) : index == 1 ? (
 										<FiLayout size={25} />
 									) : index == 2 ? (
-										<FiLayout size={25} />
-									) : index == 3 ? (
 										<IoAnalyticsSharp size={25} />
-									) : index == 4 ? (
+									) : index == 3 ? (
 										<FiDatabase size={25} />
-									) : index == 5 ? (
+									) : index == 4 ? (
 										<BsCopy size={25} />
-									) : index == 6 ? (
+									) : index == 5 ? (
 										<CgMail size={25} />
-									) : index == 7 ? (
+									) : index == 6 ? (
 										<LuMessageSquare size={25} />
-									) : index == 8 ? (
+									) : index == 7 ? (
 										<SlBasket size={25} />
-									) : index == 9 ? (
+									) : index == 8 ? (
 										<MdOutlineDateRange size={25} />
-									) : index == 10 ? (
+									) : index == 9 ? (
 										<CgLogOut size={25} />
 									) : (
-										<FiLayout size={25} />
+										''
 									)}
 									{isOpen && <p className='chakra-text css-0'>Home</p>}
 								</div>
