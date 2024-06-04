@@ -3,7 +3,7 @@ import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ChartDataItem } from '../../utils/types/ChartDataItem';
 import { ChartType } from '../../utils/types/ChartType';
-
+import "./chart.css"
 
 const LineChart: React.FC = () => {
   const series: ChartDataItem[] = [
@@ -109,7 +109,7 @@ const LineChart: React.FC = () => {
         <h2 className='text-[#15134B] font-bold '>Performance</h2>
         <span>Year</span>
       </div>
-      <div className='w-[100%] max-[350px]:h-[200px] sm:min-h-[100px] lg:max-h-[300px] line-chart rounded-md overflow-hidden'>
+      <div className='w-[100%]  line_chart_box z-10 max-[350px]:h-[200px] sm:min-h-[100px] lg:max-h-[300px] line-chart rounded-md overflow-hidden'>
         <ReactApexChart options={options} series={series} type='area' />
       </div>
     </div>
