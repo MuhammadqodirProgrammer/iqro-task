@@ -3,6 +3,7 @@ import { IoIosSearch } from 'react-icons/io';
 import { FaRegBell } from 'react-icons/fa6';
 import profileImg from '../../assets/images/profile.webp';
 import { useState } from 'react';
+import { NavLinks } from '../../components/NavLinks/NavLinks';
 
 const Header = () => {
 	const [isOffcanvasOpen, setOffcanvasOpen] = useState(false);
@@ -117,7 +118,9 @@ const Header = () => {
 					<div
 						style={{ zIndex: 99 }}
 						className={`h-screen  bg-[#fff] dark:bg-topColor z-50`}
-					></div>
+					>
+						<NavLinks  isText={true}/>
+					</div>
 				</nav>
 			)}
 		</>
